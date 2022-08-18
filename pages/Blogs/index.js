@@ -49,13 +49,13 @@ const Blogs = () => {
             <h1 className=' text-6xl mb-14'>Featured Blogs</h1>
             <div className='w-full grid md:grid-cols-2 grid-cols-1 grid-rows-3 gap-8'>
                 <div className=' row-span-3 relative my-2 before:content-[""] before:w-full before:z-10 before:h-full before:absolute before:top-0 before:left-0 before:bg-darkGrey/60 '>
-                    <img src={blogs[actifBlog].img} className='absolute top-0 left-0 z-0 w-full h-full'></img>
+                    <img src={blogs[actifBlog].img} alt="" className='absolute top-0 left-0 z-0 w-full h-full'></img>
                     <div className='relative z-20 flex flex-col pb-10 h-full'>
                         <button className=' uppercase bg-brown/50 px-8 py-5 w-fit '>Trending</button>
                         <h1 className=' text-6xl px-16 flex-auto flex items-end mb-14'>{blogs[actifBlog].title}</h1>
                         <div className='flex px-16 justify-between'>
                             <div className='flex items-center'>
-                                <img src='/assets/writer-blog.png' className=' mr-4'></img>
+                                <img src='/assets/writer-blog.png' alt="" className=' mr-4'></img>
                                 <div className=' flex flex-col gap-2'>
                                     <h2>{blogs[actifBlog].writer}</h2>
                                     <h2 className=' text-grey'>{blogs[actifBlog].date}</h2>
@@ -68,7 +68,7 @@ const Blogs = () => {
                                         data: JSON.stringify(blogs[actifBlog]),
                                     },
                                 }}>
-                                    <a className=' flex cursor-pointer'>Read More <img src='/assets/whiteArrow.svg' className=' ml-2'></img></a>
+                                    <a className=' flex cursor-pointer'>Read More <img src='/assets/whiteArrow.svg' alt="" className=' ml-2'></img></a>
                                 </Link>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const Blogs = () => {
                 {
                     featuredBlogs.map((i,index) => {
                         return <div className=' row-span-1 flex gap-8' key={index} indice={i}>
-                            <img src={blogs[i].img} className=' aspect-square cursor-pointer' onClick={(e) => {
+                            <img src={blogs[i].img} alt="" className=' aspect-square cursor-pointer' onClick={(e) => {
                             setActifBlog(i)
                         }}></img>
                             <div className=' flex flex-col gap-y-3'>

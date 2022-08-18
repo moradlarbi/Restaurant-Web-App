@@ -3,61 +3,113 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import MenuItem from '../components/MenuItem'
 const Menu = () => {
-    const [menus,setMenus] = useState([
-        {
-          name:"Drp coffe",
-          price: "8.85$",
-          category: "Coffe",
-        },
-        {
-          name:"Sandiwch",
-          price: "8.85$",
-          category: "Fast Food",
-        },
-        {
-          name:"Cocktail sodaruch",
-          price: "8.85$",
-          category: "Cocktail"
-        },
-        {
-          name:"Cheese cake",
-          price: "8.85$",
-          category: "Quafe Cake",
-        },
-        {
-          name:"speciale",
-          price: "8.85$",
-          category: "Snacks"
-        },
-        {
-          name:"Drp coffe",
-          price: "8.85$",
-          category: "Coffe"
-        },
-    
-      ])
-      const [categories, setCategories] = useState([
-        {
-          title: "Quafe Cake",
-          desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
-        },
-        {
-          title: "Coffe",
-          desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
-        },
-        {
-          title: "Fast Food",
-          desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
-        },
-        {
-          title: "Cocktail",
-          desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
-        },
-        {
-          title: "Snacks",
-          desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
-        },
-      ])
+  const [categories, setCategories] = useState([
+    {
+      title: "quafe cake",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/6X7xZbR/cake.png"
+    },
+    {
+      title: "snacks",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/tChxMXz/snacks.png"
+    },
+    {
+      title: "coffee",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/RzSQmVM/coffee.png"
+    },
+    {
+      title: "cocktail",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/nCDrQZG/cocktail.png"
+    },
+    {
+      title: "fast food",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/t3mVXyc/fast-food.png"
+    },
+    {
+      title: "grill",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/Qjx42v2/grill.png"
+    },
+  ])
+  const [menus,setMenus] = useState([
+    {
+      name:"Drp coffe",
+      price: "8.85$",
+      category: "coffee",
+      link: "https://i.ibb.co/SRygcRN/drp-cofee.png"
+    },
+    {
+      name:"Sandiwch",
+      price: "4$",
+      category: "fast food",
+      link: "https://i.ibb.co/wcdn5wL/sandwich.png"
+    },
+    {
+      name:"Cocktail",
+      price: "6$",
+      category: "cocktail",
+      link: "https://i.ibb.co/vzYPVNL/cocktail.png"
+    },
+    {
+      name:"quafe brade",
+      price: "9.85$",
+      category: "quafe cake",
+      link: "https://i.ibb.co/dfmSwMj/quafe-brade.png"
+    },
+    {
+      name:"french fries",
+      price: "3.85$",
+      category: "snacks",
+      link: "https://i.ibb.co/zhnQ99s/french-fries.png"
+    },
+    {
+      name:"fruit salade",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/FX6zx15/fruit-salad.png"
+    },
+    {
+      name:"chwimn noodle",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/vqzRk6v/chowmin-nodle.png"
+    },
+    {
+      name:"cola",
+      price: "5$",
+      category: "cocktail",
+      link: "https://i.ibb.co/HhDvhYT/coka-cola.png"
+    },
+    {
+      name:"dalgona coffee",
+      price: "5$",
+      category: "coffee",
+      link: "https://i.ibb.co/pdkgFpN/dalgona-cofee.png"
+    },
+    {
+      name:"choco cake",
+      price: "6$",
+      category: "quafe cake",
+      link: "https://i.ibb.co/9ZQV83p/choco-cake.png"
+    },
+    {
+      name:"chicken burger",
+      price: "5$",
+      category: "grill",
+      link: "https://i.ibb.co/KsWDFnp/chicken-burger.png"
+    },
+    {
+      name:"chinese soupe",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/kQG2MRz/chinese-soup.png"
+    },
+
+  ])
       const [showCategorie, setShowCategorie] = useState("");
       const actifCategorie = useRef()
       function updateActifCategorie(el) {

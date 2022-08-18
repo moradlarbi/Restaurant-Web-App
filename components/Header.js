@@ -6,7 +6,7 @@ const Header = () => {
     <header className=' w-full flex md:flex-row md:items-center flex-col'>
         <nav className=' flex py-6 px-4 md:px-0'>
             <div className='md:mr-12 cursor-pointer '>
-                <Link href="/"><img src='/assets/logo.svg' alt='logo'></img></Link>
+                <Link href="/"><a> <img src='/assets/logo.svg' alt='logo'></img></a></Link>
             </div>
             <div className="flex-auto flex justify-end">
                 <div className=" md:hidden relative cursor-pointer flex gap-1 flex-col justify-center" onClick={() => {

@@ -4,10 +4,10 @@ import React from 'react'
 const Article = ({blog}) => {
   return (
     <div className='flex gap-x-10'>
-        <img src={blog.img} className=''></img>
+        <img src={blog.img} alt="" className=''></img>
         <div className=' flex flex-col justify-center gap-7'>
             <div className='flex items-center'>
-                <img src='/assets/writer-blog.png' className=' mr-4'></img>
+                <img src='/assets/writer-blog.png' alt="" className=' mr-4'></img>
                 <div className=' flex flex-col gap-2'>
                     <h2>{blog.writer}</h2>
                     <h2 className=' text-grey'>{blog.date}</h2>
@@ -21,7 +21,7 @@ const Article = ({blog}) => {
                         data: JSON.stringify(blog),
                     },
                 }}>
-                    <a className=' flex cursor-pointer'>Read More <img src='/assets/whiteArrow.svg' className=' ml-7'></img></a>
+                    <a className=' flex cursor-pointer'>Read More <img src='/assets/whiteArrow.svg' alt="" className=' ml-7'></img></a>
                 </Link>
                 
             </div>

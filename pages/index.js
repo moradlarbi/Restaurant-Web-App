@@ -7,10 +7,7 @@ import BlogItem from '../components/BlogItem'
 import Footer from '../components/Footer'
 import styles from "../styles/Home.module.css"
 import Link from 'next/link'
-export default function Home(results) {
-  const initState = results;
-  const [characters, setCharacters] = useState(initState.characters);
-  console.log(characters)
+export default function Home() {
   const [infos, setInfos] = useState([
     {
       "title": "Opening Times",
@@ -45,60 +42,108 @@ export default function Home(results) {
   ])
   const [categories, setCategories] = useState([
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "quafe cake",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/6X7xZbR/cake.png"
     },
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "snacks",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/tChxMXz/snacks.png"
     },
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "coffee",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/RzSQmVM/coffee.png"
     },
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "cocktail",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/nCDrQZG/cocktail.png"
     },
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "fast food",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/t3mVXyc/fast-food.png"
     },
     {
-      title: "Quafe Cake",
-      desc: "Through True Rich Attended no end it his mother since favourable real had half every him."
+      title: "grill",
+      desc: "Through True Rich Attended no end it his mother since favourable real had half every him.",
+      link: "https://i.ibb.co/Qjx42v2/grill.png"
     },
   ])
   const [menus,setMenus] = useState([
     {
       name:"Drp coffe",
       price: "8.85$",
-      category: "Coffe",
+      category: "coffee",
+      link: "https://i.ibb.co/SRygcRN/drp-cofee.png"
     },
     {
       name:"Sandiwch",
-      price: "8.85$",
-      category: "Fast Food",
+      price: "4$",
+      category: "fast food",
+      link: "https://i.ibb.co/wcdn5wL/sandwich.png"
     },
     {
-      name:"Cocktail sodaruch",
-      price: "8.85$",
-      category: "Cocktail"
+      name:"Cocktail",
+      price: "6$",
+      category: "cocktail",
+      link: "https://i.ibb.co/vzYPVNL/cocktail.png"
     },
     {
-      name:"Cheese cake",
-      price: "8.85$",
-      category: "Quafe Cake",
+      name:"quafe brade",
+      price: "9.85$",
+      category: "quafe cake",
+      link: "https://i.ibb.co/dfmSwMj/quafe-brade.png"
     },
     {
-      name:"speciale",
-      price: "8.85$",
-      category: "Snacks"
+      name:"french fries",
+      price: "3.85$",
+      category: "snacks",
+      link: "https://i.ibb.co/zhnQ99s/french-fries.png"
     },
     {
-      name:"Drp coffe",
-      price: "8.85$",
-      category: "Coffe"
+      name:"fruit salade",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/FX6zx15/fruit-salad.png"
+    },
+    {
+      name:"chwimn noodle",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/vqzRk6v/chowmin-nodle.png"
+    },
+    {
+      name:"cola",
+      price: "5$",
+      category: "cocktail",
+      link: "https://i.ibb.co/HhDvhYT/coka-cola.png"
+    },
+    {
+      name:"dalgona coffee",
+      price: "5$",
+      category: "coffee",
+      link: "https://i.ibb.co/pdkgFpN/dalgona-cofee.png"
+    },
+    {
+      name:"choco cake",
+      price: "6$",
+      category: "quafe cake",
+      link: "https://i.ibb.co/9ZQV83p/choco-cake.png"
+    },
+    {
+      name:"chicken burger",
+      price: "5$",
+      category: "grill",
+      link: "https://i.ibb.co/KsWDFnp/chicken-burger.png"
+    },
+    {
+      name:"chinese soupe",
+      price: "5$",
+      category: "snacks",
+      link: "https://i.ibb.co/kQG2MRz/chinese-soup.png"
     },
 
   ])
@@ -170,10 +215,10 @@ useEffect(() => {
         <div className=' flex flex-col pr-16 py-8'>
           <h1 className=' font-bold text-title mb-9'>We serve high quality foods of all kinds.</h1>
           <h4 className=' text-grey text-base mb-6 tracking-tight'>Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text.</h4>
-          <Link href="/Menu">
-            <button className={styles.btn+' outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>
+          <Link href="/Menu" passHref>
+            <a className={styles.btn+' outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>
               View Menu <img src='/assets/arrow.svg' alt='arrow' className='pl-2 w-8 h-8'></img> 
-            </button>
+            </a>
           </Link>
           <div>
             {
@@ -206,7 +251,7 @@ useEffect(() => {
             }
           </div>
           <Link href="/Menu">
-            <button className={styles.btn+' outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>View Menu <img src='/assets/arrow.svg' alt='arrow' className=' pl-2 w-8 h-8'></img> </button>
+            <a className={styles.btn+' outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>View Menu <img src='/assets/arrow.svg' alt='arrow' className=' pl-2 w-8 h-8'></img> </a>
           </Link>
         </div>
         <div className=' flex relative z-10 justify-between md:justify-start'>
@@ -237,18 +282,18 @@ useEffect(() => {
           <h1 className=' capitalize text-xl'>Most popular picks</h1>
           <div className=' grid gap-8 grid-cols-minMax mt-7 mb-7'>
             {
-              menus.map((item,index) => {
+              menus.slice(0,6).map((item,index) => {
                 return <MenuItem key={index} item={item} />
               })
             }
             </div>
             <Link href="/Menu">
-            <button className={styles.btn+' mx-auto outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>View Menu <img src='/assets/arrow.svg' alt='arrow' className=' pl-2 w-8 h-8'></img> </button>
+            <a className={styles.btn+' mx-auto outline-none flex bg-primary w-fit text-secondary px-6 py-3 rounded-sm items-center font-semibold text-base mb-10 duration-200 hover:text-white hover:bg-bgBtn'}>View Menu <img src='/assets/arrow.svg' alt='arrow' className=' pl-2 w-8 h-8'></img> </a>
           </Link>
          </div>
          <div className=' mb-10 md:-mx-30 flex md:m-16 md:px-0 px-4 flex-col md:flex-row'>
             <div className=' bg-darkGrey md:w-2/5 w-full flex flex-col px-[40px] py-[30px]'>
-              <div className=' text-quote'>"</div>
+              <div className=' text-quote'>&apos;&apos;</div>
               <h1 className=' text-3xl mb-16'>Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text by dragging and dropping the text</h1>
               <div className=' flex justify-between pb-3 relative after:h-tiny after:w-full after:bg-grey after:content-[""] after:absolute after:bottom-0 '>
                 <div>
@@ -281,42 +326,4 @@ useEffect(() => {
          <Footer />
     </div>
   )
-}
-export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: "https://rickandmortyapi.com/graphql/",
-    cache: new InMemoryCache(),
-  });
-  const {data} = await client.query({
-    query: gql`
-    query {
-      characters(page: 1){
-         info {
-          count
-          pages
-        }
-        results {
-          name
-          id
-          location {
-            id
-            name
-          }
-          origin {
-            id
-            name
-          }
-          image
-        }
-      }
-    }
-    `
-  });
-  return {
-    props: {
-      characters: data.characters.results,
-    }
-  }
-
-  
-}
+};
